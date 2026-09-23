@@ -25,8 +25,9 @@ body {
   border-radius: 30px;
   padding: 20px;
   width: 400px;
+  padding-block: 2rem;
 }
-.submit-btn,
+#login-btn,
 input {
   width: 100%;
   border: none;
@@ -35,7 +36,7 @@ input {
   border-radius: 999px;
   margin-bottom: 1rem;
 }
-.submit-btn {
+#login-btn {
   background-color: #3b25c1;
   color: white;
 }
