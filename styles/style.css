@@ -1,0 +1,43 @@
+body {
+  background-color: #f4f5f7;
+}
+* {
+  margin: 0;
+  pad: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: (92%, 1200px);
+  margin-inline: auto;
+}
+
+/* login page */
+.login-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.input-field {
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 20px;
+  width: 400px;
+}
+.submit-btn,
+input {
+  width: 100%;
+  border: none;
+  background-color: #f4f5f7;
+  padding: 10px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.submit-btn {
+  background-color: #3b25c1;
+  color: white;
+}
+
+
