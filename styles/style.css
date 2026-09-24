@@ -111,7 +111,7 @@ hr {
   text-align: center;
 }
 .addMoney {
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   font-size: 1.5rem;
 }
 .withdraw {
@@ -120,4 +120,39 @@ hr {
   border-radius: 30px;
 }
 
-/* #add-money-section, # */
+/* transaction section design */
+.transactions-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+.history-container {
+  padding-inline: 0.8rem;
+}
+.item-left {
+  display: flex;
+  gap: 10px;
+}
+.item-left img {
+  display: block;
+  background-color: rgba(8, 8, 8, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+}
+.item {
+  background-color: #ffffff;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(8, 8, 8, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.item-data h4 {
+  margin-bottom: 5px;
+}
+.item-data p {
+  color: rgba(8, 8, 8, 0.7);;
+}

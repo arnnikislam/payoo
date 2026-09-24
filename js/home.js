@@ -1,5 +1,5 @@
 // for addMoney
-
+let savedHistory = [];
 const availableBalanceField = document.querySelector(".available-balance");
 let availableBalance = parseInt(availableBalanceField.innerText);
 const currentPin = 1234;
@@ -17,6 +17,12 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   ) {
     availableBalance += addAmount;
     availableBalanceField.innerText = availableBalance;
+    const historyData = {
+      name: "Add Money",
+      date: new Date().toLocaleTimeString(),
+    };
+    // console.log(historyData)
+    savedHistory.push(historyData);
   } else {
     alert("Wrong info!");
   }
@@ -38,6 +44,12 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   ) {
     availableBalance -= cashoutAmount;
     availableBalanceField.innerText = availableBalance;
+    const historyData = {
+      name: "Cashout",
+      date: new Date().toLocaleTimeString(),
+    };
+    // console.log(historyData)
+    savedHistory.push(historyData);
   } else {
     alert("Wrong info!");
   }
@@ -77,8 +89,44 @@ document.getElementById("bonus-card").addEventListener("click", function () {
 document.getElementById("bill-card").addEventListener("click", function () {
   showSection("bill-section", "bill-card");
 });
+
+// transaction
 document
   .getElementById("transactions-card")
   .addEventListener("click", function () {
     showSection("transactions-section", "transactions-card");
+    for (const data of savedHistory) {
+      const historyContainer = document.querySelector(".history-container");
+
+      const historyEachData = document.createElement("div");
+      historyEachData.innerHTML = `<div class="item">
+              <div class="item-left">
+                <img src="./assets/opt-1.png" alt="" />
+                <div class="item-data">
+                  <h4>${data.name}</h4>
+                  <p>Today ${data.date}</p>
+                </div>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-ellipsis-vertical preview-icon"
+                >
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" />
+                </svg>
+              </div>
+            </div>`;
+      historyContainer.append(historyEachData);
+    }
+    savedHistory = [];
   });
