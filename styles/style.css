@@ -93,6 +93,7 @@ hr {
   border-radius: 0 0 30px 30px;
 }
 .card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,10 +102,15 @@ hr {
   border-radius: 5px;
   padding: 10px;
 }
+.card-active {
+  color: #0874f2;
+  border: 2px solid #0874f2;
+  background-color: rgba(8, 116, 242, 0.05);
+}
 .card p {
   text-align: center;
 }
-.addMoney{
+.addMoney {
   padding: 0.8rem 1.5rem;
   font-size: 1.5rem;
 }

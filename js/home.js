@@ -45,33 +45,40 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
 // toggling using reusable function
 // reusable func
-function showSection(id) {
+function showSection(id, btnId) {
   const btns = document.getElementsByClassName("btn-section");
   for (const btn of btns) {
     btn.style.display = "none";
   }
   document.getElementById(id).style.display = "block";
+
+  // for active color
+  const cards = document.getElementsByClassName("card");
+  for (const card of cards) {
+    card.classList.remove("card-active");
+  }
+  document.getElementById(btnId).classList.add("card-active");
 }
 
 document
   .getElementById("add-money-card")
   .addEventListener("click", function () {
-    showSection("add-money-section");
+    showSection("add-money-section", "add-money-card");
   });
 document.getElementById("cashout-card").addEventListener("click", function () {
-  showSection("cashout-section");
+  showSection("cashout-section", "cashout-card");
 });
 document.getElementById("transfer-card").addEventListener("click", function () {
-  showSection("transfer-section");
+  showSection("transfer-section", "transfer-card");
 });
 document.getElementById("bonus-card").addEventListener("click", function () {
-  showSection("bonus-section");
+  showSection("bonus-section", "bonus-card");
 });
 document.getElementById("bill-card").addEventListener("click", function () {
-  showSection("bill-section");
+  showSection("bill-section", "bill-card");
 });
 document
   .getElementById("transactions-card")
   .addEventListener("click", function () {
-    showSection("transactions-section");
+    showSection("transactions-section", "transactions-card");
   });
