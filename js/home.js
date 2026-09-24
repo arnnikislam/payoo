@@ -10,6 +10,10 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   );
   const addAmount = parseInt(document.getElementById("addAmount").value);
   const typedPin = parseInt(document.getElementById("pin").value);
+  if (addAmount < 0) {
+    alert("Invalid amount");
+    return;
+  }
   //   console.log(availableBalance, typedBankAccountNumber, addAmount, typedPin);
   if (
     currentPin === typedPin &&
@@ -37,6 +41,10 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     document.getElementById("cashoutAmount").value,
   );
   const typedPin = parseInt(document.getElementById("cashoutPin").value);
+  if (cashoutAmount < 0) {
+    alert("Invalid amount");
+    return;
+  }
   //   console.log(availableBalance, typedAgentAccountNumber, cashoutAmount, typedPin);
   if (
     currentPin === typedPin &&
