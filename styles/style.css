@@ -104,7 +104,7 @@ hr {
 .card p {
   text-align: center;
 }
-.addMoney {
+.addMoney{
   padding: 0.8rem 1.5rem;
   font-size: 1.5rem;
 }
@@ -113,3 +113,5 @@ hr {
   padding: 2rem 1rem;
   border-radius: 30px;
 }
+
+/* #add-money-section, # */

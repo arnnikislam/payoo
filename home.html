@@ -39,11 +39,11 @@
 
         <!-- card container -->
         <div class="card-container">
-          <div class="card">
+          <div id="add-money-card" class="card">
             <img src="./assets/opt-1.png" alt="" />
             <p>Add Money</p>
           </div>
-          <div class="card">
+          <div id="cashout-card" class="card">
             <img src="./assets/opt-2.png" alt="" />
             <p>Cashout</p>
           </div>
@@ -64,47 +64,82 @@
             <p>Transactions</p>
           </div>
         </div>
-        <p class="addMoney"><b>Add Money</b></p>
 
         <!-- add money section -->
-        <form action="" class="withdraw">
-          <label for="bank">Select Bank</label> <br />
-          <select name="bank" id="">
-            <option value="">AB Bank</option>
-            <option value="">Prime Bank</option>
-            <option value="">Brac Bank</option>
-          </select>
-          <br />
-          <label for="accNumber">Bank Account Number</label> <br />
-          <input
-            type="text"
-            name="accNumber"
-            id="accNumber"
-            placeholder="Enter 11 digit acc Number"
-          />
-          <br />
-          <label for="addAmount">Amount to add</label> <br />
-          <input
-            type="text"
-            name="addAmount"
-            id="addAmount"
-            placeholder="Add Amount to withdraw"
-          />
-          <br />
-          <label for="pin">Pin Number</label> <br />
-          <input
-            type="text"
-            name="pin"
-            id="pin"
-            placeholder="Enter 4 digit pin"
-          />
-          <br />
-          <button id="add-money-btn" class="btn" type="button">Add Money</button>
-        </form>
+        <div style="display: none" id="add-money-section">
+          <p class="addMoney"><b>Add Money</b></p>
+          <form action="" class="withdraw">
+            <label for="bank">Select Bank</label> <br />
+            <select name="bank" id="">
+              <option value="">AB Bank</option>
+              <option value="">Prime Bank</option>
+              <option value="">Brac Bank</option>
+            </select>
+            <br />
+            <label for="accNumber">Bank Account Number</label> <br />
+            <input
+              type="text"
+              name="accNumber"
+              id="accNumber"
+              placeholder="Enter 11 digit acc Number"
+            />
+            <br />
+            <label for="addAmount">Amount to add</label> <br />
+            <input
+              type="text"
+              name="addAmount"
+              id="addAmount"
+              placeholder="Add Amount to withdraw"
+            />
+            <br />
+            <label for="pin">Pin Number</label> <br />
+            <input
+              type="text"
+              name="pin"
+              id="pin"
+              placeholder="Enter 4 digit pin"
+            />
+            <br />
+            <button id="add-money-btn" class="btn" type="button">
+              Add Money
+            </button>
+          </form>
+        </div>
+
+        <!-- cashout section -->
+        <div style="display: none" id="cashout-section">
+          <p class="addMoney"><b>Cashout</b></p>
+          <form action="" class="withdraw">
+            <label>Agent Account Number</label> <br />
+            <input
+              type="text"
+              id="agentAccNumber"
+              placeholder="Enter 11 agent digit acc Number"
+            />
+            <br />
+            <label>Amount to cashout</label> <br />
+            <input
+              type="text"
+              id="cashoutAmount"
+              placeholder="Add Amount to withdraw"
+            />
+            <br />
+            <label>Pin Number</label> <br />
+            <input
+              type="text"
+              id="cashoutPin"
+              placeholder="Enter 4 digit pin"
+            />
+            <br />
+            <button id="cashout-btn" class="btn" type="button">
+              Add Money
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
     <!-- script -->
-     <script src="./js/home.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
