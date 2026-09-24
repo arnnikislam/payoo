@@ -43,14 +43,35 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   }
 });
 
-// toggling between add money and cashout
+// toggling using reusable function
+// reusable func
+function showSection(id) {
+  const btns = document.getElementsByClassName("btn-section");
+  for (const btn of btns) {
+    btn.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+
 document
   .getElementById("add-money-card")
   .addEventListener("click", function () {
-    document.getElementById("add-money-section").style.display = "block";
-    document.getElementById("cashout-section").style.display = "none";
+    showSection("add-money-section");
   });
 document.getElementById("cashout-card").addEventListener("click", function () {
-  document.getElementById("cashout-section").style.display = "block";
-  document.getElementById("add-money-section").style.display = "none";
+  showSection("cashout-section");
 });
+document.getElementById("transfer-card").addEventListener("click", function () {
+  showSection("transfer-section");
+});
+document.getElementById("bonus-card").addEventListener("click", function () {
+  showSection("bonus-section");
+});
+document.getElementById("bill-card").addEventListener("click", function () {
+  showSection("bill-section");
+});
+document
+  .getElementById("transactions-card")
+  .addEventListener("click", function () {
+    showSection("transactions-section");
+  });

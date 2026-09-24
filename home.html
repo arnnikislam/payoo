@@ -47,26 +47,26 @@
             <img src="./assets/opt-2.png" alt="" />
             <p>Cashout</p>
           </div>
-          <div class="card">
+          <div id="transfer-card" class="card">
             <img src="./assets/opt-3.png" alt="" />
             <p>Transfer Money</p>
           </div>
-          <div class="card">
+          <div id="bonus-card" class="card">
             <img src="./assets/opt-4.png" alt="" />
             <p>Get Bonus</p>
           </div>
-          <div class="card">
+          <div id="bill-card" class="card">
             <img src="./assets/opt-5.png" alt="" />
             <p>Pay Bill</p>
           </div>
-          <div class="card">
+          <div id="transactions-card" class="card">
             <img src="./assets/opt-6.png" alt="" />
             <p>Transactions</p>
           </div>
         </div>
 
         <!-- add money section -->
-        <div style="display: none" id="add-money-section">
+        <div class="btn-section" style="display: none" id="add-money-section">
           <p class="addMoney"><b>Add Money</b></p>
           <form action="" class="withdraw">
             <label for="bank">Select Bank</label> <br />
@@ -107,7 +107,7 @@
         </div>
 
         <!-- cashout section -->
-        <div style="display: none" id="cashout-section">
+        <div class="btn-section" style="display: none" id="cashout-section">
           <p class="addMoney"><b>Cashout</b></p>
           <form action="" class="withdraw">
             <label>Agent Account Number</label> <br />
@@ -135,6 +135,42 @@
               Add Money
             </button>
           </form>
+        </div>
+
+        <!-- Transfer Money section -->
+        <div class="btn-section" style="display: none" id="transfer-section">
+          <p class="addMoney"><b>Transfer Money</b></p>
+          <div style="padding-inline: 1rem">
+            Same design as others input field
+          </div>
+        </div>
+
+        <!-- Get Bonus section -->
+        <div class="btn-section" style="display: none" id="bonus-section">
+          <p class="addMoney"><b>Get Bonus</b></p>
+          <div style="padding-inline: 1rem">
+            Same design as others input field
+          </div>
+        </div>
+
+        <!-- Pay Bill section -->
+        <div class="btn-section" style="display: none" id="bill-section">
+          <p class="addMoney"><b>Pay Bill</b></p>
+          <div style="padding-inline: 1rem">
+            Same design as others input field
+          </div>
+        </div>
+
+        <!-- Transactions section -->
+        <div
+          class="btn-section"
+          style="display: none"
+          id="transactions-section"
+        >
+          <p class="addMoney"><b>Transactions</b></p>
+          <div style="padding-inline: 1rem">
+            Same design as others input field
+          </div>
         </div>
       </section>
     </main>
