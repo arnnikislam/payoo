@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/43ad48246d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <main>
+      <section class="home">
+        <!-- navbar -->
+        <div class="navbar">
+          <div class="nav-info">
+            <img class="logo" src="./assets/logo.png" alt="" srcset="" />
+            <div>
+              <p>$45000</p>
+              <p>Available Balance</p>
+            </div>
+          </div>
+          <button id="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+          </button>
+        </div>
+        <hr />
+
+        <!-- welcome -->
+        <div class="welcome">
+          <h2>Welcome to Pay<span class="payoo-purple">oo</span></h2>
+          <p>
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+
+        <!-- card container -->
+        <div class="card-container">
+          <div class="card">
+            <img src="./assets/opt-1.png" alt="" />
+            <p>Add Money</p>
+          </div>
+          <div class="card">
+            <img src="./assets/opt-2.png" alt="" />
+            <p>Cashout</p>
+          </div>
+          <div class="card">
+            <img src="./assets/opt-3.png" alt="" />
+            <p>Transfer Money</p>
+          </div>
+          <div class="card">
+            <img src="./assets/opt-4.png" alt="" />
+            <p>Get Bonus</p>
+          </div>
+          <div class="card">
+            <img src="./assets/opt-5.png" alt="" />
+            <p>Pay Bill</p>
+          </div>
+          <div class="card">
+            <img src="./assets/opt-6.png" alt="" />
+            <p>Transactions</p>
+          </div>
+        </div>
+        <p class="addMoney"><b>Add Money</b></p>
+
+        <!-- add money section -->
+        <form action="" class="withdraw">
+          <label for="bank">Select Bank</label> <br />
+          <select name="bank" id="">
+            <option value="">AB Bank</option>
+            <option value="">Prime Bank</option>
+            <option value="">Brac Bank</option>
+          </select>
+          <br />
+          <label for="accNumber">Bank Account Number</label> <br />
+          <input
+            type="text"
+            name="accNumber"
+            id="accNumber"
+            placeholder="Enter 11 digit acc Number"
+          />
+          <br />
+          <label for="addAmount">Amount to add</label> <br />
+          <input
+            type="text"
+            name="addAmount"
+            id="addAmount"
+            placeholder="Add Amount to withdraw"
+          />
+          <br />
+          <label for="pin">Pin Number</label> <br />
+          <input
+            type="text"
+            name="pin"
+            id="pin"
+            placeholder="Enter 4 digit pin"
+          />
+          <br />
+          <button class="btn" type="button">Add Money</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
